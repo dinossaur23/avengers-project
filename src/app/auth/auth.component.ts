@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-auth',
@@ -9,19 +10,32 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AuthComponent implements OnInit {
   email:String;
   password:String;
+  authFailed:boolean;
 
-  constructor(private router: Router) { }
+  constructor(private router:Router, private _http:Http) { }
 
   ngOnInit() {
     this.email = null;
     this.password = null;
+    this.authFailed = false;
   }
 
   login(){
-    console.log(this.email);
-    console.log(this.password);
+    let auth;
+      this._http.get("localhost:3005/users/authenticate")
+      .subscribe(result => {
+        auth = result.json();
+        console.log(JSON.stringify(auth));
+      ;
+      })
 
-    this.router.navigate(['./home']);
+    if(auth.status == 'Sucess'){
+      this.router.navigate(['./home']);
+    }
+
+    else{
+      this.authFailed = true;
+    }
 
   }
 
