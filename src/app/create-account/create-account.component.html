@@ -1,0 +1,29 @@
+<br/><br/>
+<div class="container">
+	<div class="row form-center">
+	<h2><strong>Create your account</strong><br/></h2><br/>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br/>
+      <form>
+        <div class="form-group">
+          <label for="inputEmail">Name</label>
+          <input name="name" [(ngModel)]="name" type="name" class="form-control input" id="inputName" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">Email address</label>
+          <input name="email" [(ngModel)]="email" type="email" class="form-control input" id="inputEmail" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input name="password" [(ngModel)]="password" type="password" class="form-control input" id="inputPassword" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Confirm password</label>
+          <input name="confirmPassword" [(ngModel)]="confirmPassword" type="password" class="form-control input" id="inputConfirmPassword" placeholder="Confirm password">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-outline-success button" (click)="createAccount()">Create</button>
+        </div>
+      </form>
+		</div>
+	</div>
+</div>

@@ -9,13 +9,15 @@ import { AvengersComponent } from './avengers/avengers.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './home/home.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AvengersComponent,
     AuthComponent,
-    HomeComponent
+    HomeComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,

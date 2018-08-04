@@ -1,29 +1,24 @@
 <br/><br/>
 <div class="container">
-	<div class="row">
+	<div class="row form-center">
 	<h2><strong>Login to see your avengers team!</strong><br/></h2><br/>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<br/>
-                    <form>
-                      <div class="form-group">
-                        <label for="inputEmail">Email address</label>
-                        <input name="email" [(ngModel)]="email" type="email" class="form-control" id="inputEmail" placeholder="Enter email" style="width: 500px;">
-                      </div>
-                      <div class="form-group">
-                        <label for="inputPassword">Password</label>
-                        <input name="password" [(ngModel)]="password" type="password" class="form-control" name="password" id="inputPassword" placeholder="Password" style="width: 500px;">
-                      </div>
-											<div class="form-group">
-                        <button type="submit" class="btn btn-warning" (click)="firstAccess()" style="width: 200px;">I don't have an account</button>
-                      </div>
-                      <div class="form-group">
-                        <button type="submit" class="btn btn-primary" (click)="login()" style="width: 200px;">Login</button>
-                      </div>
-
-                    </form>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br/>
+      <form>
+        <div class="form-group">
+          <label for="inputEmail">Email address</label>
+          <input name="email" [(ngModel)]="email" type="email" class="form-control input" id="inputEmail" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input name="password" [(ngModel)]="password" type="password" class="form-control input" name="password" id="inputPassword" placeholder="Password">
+        </div>
+				<div class="form-group">
+          <button type="submit" class="btn btn-outline-warning button" (click)="firstAccess()">I don't have an account</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-outline-primary button" (click)="login()">Login</button>
+        </div>
+      </form>
 		</div>
-
-
-
 	</div>
 </div>
